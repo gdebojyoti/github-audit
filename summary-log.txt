@@ -1,0 +1,460 @@
+=== 101-angular
+2024-12-08 Dynamic form created for config driven UI.
+2024-12-08 Basic styles.
+2024-12-08 Basic form.
+2024-12-08 Clean up header.
+2024-12-08 Header component added.
+files: .editorconfig .gitignore .vscode README.md angular.json package-lock.json package.json public src tsconfig.app.json tsconfig.json tsconfig.spec.json 
+
+=== 101-dsa
+2026-09-30 Day 46: Binary search tree - check validity.
+2026-09-29 Merge pull request #1 from gdebojyoti/binary_tree
+2026-09-29 Day 45: Binary tree - maximum path sum.
+2026-09-28 Day 44: Binary tree - count good nodes; populating next right pointers.
+2026-09-27 Day 43: Binary tree - lowest common ancestor; right side view.
+files: 1-warm-up 10-binary-tree 100-notes 11-binary-search-tree 2-arrays 3-recursion 4-search-sort 5-linked-lists 6-strings 7-stack-and-queue 8-binary-search-algorithm 9-two-pointer-and-sliding-window 
+
+=== 101-mfe
+2026-06-29 Public path fix for profile app.
+2026-06-25 Navigation between profile & container apps. (#2)
+2026-06-24 Pipeline changes (#1)
+2026-06-19 fix
+2026-06-19 fix
+files: .github .gitignore container pokedex profile quiz readme.md 
+wf:container.yml 
+=== 101-mfe-webpack
+2025-01-31 Comment added to explain "gotcha".
+2025-01-31 Container consumes exported render method from ttt.
+2025-01-31 ttt div ID changed to app.
+2025-01-31 Refactor ttt bootstrap to use & export render method.
+2025-01-31 remoteEntry.js file name.
+files: .gitignore container readme.md tictactoe 
+
+=== 101-node
+2026-09-23 JSON import.
+2026-09-23 Fake node module created.
+2026-09-23 Files renamed to form a "module" of sorts.
+2026-09-23 Common JS -> ES Module.
+2026-09-23 Basics.
+files: 1-welcome.js 2-global-this.js app.js course.json maths node_modules package.json 
+
+=== 101-react-parcel
+2024-12-13 Dynamic URLs. Restaurant page.
+2024-12-13 Cleanup header.
+2024-12-13 Bugfix: Unhandled missing arguments for pagewrap HOC.
+2024-12-13 Pagewrap HOC.
+2024-12-13 Link tag from React router.
+files: .gitignore package-lock.json package.json src 
+
+=== 101-react-state-management
+2025-02-16 Redux toolkit integration. (#1)
+2025-02-09 Base project setup with React & Parcel.
+2025-02-09 Git ignore added.
+2025-02-09 About this repo.
+files: .gitignore README.md default redux-toolkit 
+
+=== 101-react-webpack
+2025-02-05 Support for prod build. Nodemon replaced with pm2. (#5)
+2025-02-04 Support for multiple SSR routes. (#4)
+2025-02-03 Folder structure altered. Alias added for "shared" folder. (#3)
+2025-01-16 Readme added with feature list.
+2025-01-16 Linaria added. (#2)
+files: .gitignore README.md config package-lock.json package.json src 
+
+=== 101-ts
+2026-06-02 Interface.
+2026-06-02 Classes.
+2026-06-02 Topic added.
+2026-06-01 Utils static class.
+2026-05-30 Fix.
+files: .gitignore README.md index.html package-lock.json package.json src tsconfig.json 
+
+=== CS2Mod
+2024-07-21 Enable "toolbar icon" only for "NET_TOOL".
+2024-07-21 Button added in main menu. Toolbar icon updated.
+2024-07-15 Work in progress.
+2024-07-15 "game-ui" folder added.
+2024-07-15 UI Mod initialized.
+files: .gitattributes .gitignore CS2Mod CS2Mod.sln README.md 
+
+=== boilerplate-react-vite
+2025-02-04 Readme updated.
+2025-02-04 Style fixes.
+2025-02-04 Readme updated.
+2025-02-04 React & ReactDOM updated to v19.
+2025-02-04 About page and basic Nav.
+files: .gitignore README.md eslint.config.js index.html package-lock.json package.json public src vite.config.js 
+
+=== bricklink-price-finder-firefox-extension
+2024-12-11 Handled empty input. Cleanup.
+2024-12-11 Example added.
+2024-12-11 Readme updated.
+2024-12-10 Better error handling. Minor style fixes.
+2024-12-10 Form created (along with sample data) and handled.
+files: README.md background icons manifest.json popup 
+
+=== calcul8
+2023-12-19 Meta data support. Favicon changed. (#4)
+2023-12-18 Migration to NextJS from CRA. (#3)
+2023-12-18 Vercel Speed Insights integration. (#2)
+2023-12-18 Basic EMI calculator | No UI (#1)
+2023-11-20 Initial setup.
+files: .gitignore README.md app jsconfig.json next.config.js package-lock.json package.json public src 
+
+=== charmander
+2020-04-27 Match code sharing & URL support. End game screen bug fixed. (#5)
+2020-04-25 UI patched.
+2020-04-25 Updated UI & animations. (#4)
+2020-04-13 Leave match. Phase 2 completed. (#3)
+2020-04-12 Read me updated.
+files: .babelrc .gitignore config package-lock.json package.json readme.md scripts src 
+
+=== charmeleon
+2020-04-25 Merge pull request #1 from gdebojyoti/animations
+2020-04-25 Basic API support.
+2020-04-18 Send list of all cards to player when on host, join, & rejoin.
+2020-04-17 Bugfix: No default color for wild cards.
+2020-04-15 IDs of cards rearranged.
+files: .gitignore package-lock.json package.json src 
+
+=== chat-gpt-bot
+2023-04-11 Cleanup and notes.
+2023-04-11 Readme updated.
+2023-04-11 Readme updated.
+2023-04-11 Cleanup.
+2023-04-11 Cleanup.
+files: .env.example .gitignore README.md package-lock.json package.json pages public 
+
+=== css-reset
+2016-02-22 Create reset.css
+2016-02-22 Update README.md
+2016-02-22 Initial commit
+files: README.md reset.css 
+
+=== css-stopwatch
+files: 
+
+=== ext-chrome-bricklink-price-finder
+2025-11-15 Show seller name & country.
+2025-11-15 Bugfix: extractINR does not handle commas.
+2025-11-15 Support for calculating total price.
+2025-11-15 Handle set URLs.
+2025-11-13 Minor fixes.
+files: background.js content.js manifest.json popup.html popup.js 
+
+=== fantasy-football-wc26
+2026-06-12 Initial commit from create-react-router
+files: .dockerignore .gitignore Dockerfile README.md app package-lock.json package.json public react-router.config.ts tsconfig.json vite.config.ts 
+Dockerfile 
+=== flappy-bird
+2019-04-06 Minor fix.
+2019-04-06 Using local storage.
+2019-04-06 GA high score data for retry event.
+2019-04-06 UI updated.
+2019-04-06 Arena height updated. Styles & logic altered accordingly.
+files: app.js facebook.png flappy.gif index.html localStorage.js style.css todo.txt whatsapp.png 
+
+=== gdebojyoti
+2022-02-04 fix
+2022-02-04 fix
+2022-02-04 Badges added
+2020-08-05 Initial commit
+files: README.md 
+
+=== genshin-db
+2021-11-28 Delete codeql-analysis.yml
+2021-11-28 Create codeql-analysis.yml
+2021-11-28 Create codeql-analysis.yml
+2021-06-10 log removed
+2021-06-10 Adventure EXP Table.
+files: .babelrc .github .gitignore babel.config.js package-lock.json package.json src webpack 
+wf:codeql-analysis.yml 
+=== geralt-shopify
+2023-09-03 Mobile home page (#6)
+2023-07-24 Steps updated. Support for Shopify CLI installation in package JSON. (#5)
+2022-11-02 Collections UI. Featured collection UI in home page. (#4)
+2022-10-31 Product detail page UI. Poppins font. Swiper reinstated. (#3)
+2022-10-29 Tailwind removed. Sass introduced. (#2)
+files: .gitignore .shopifyignore .theme-check.yml README.md assets config layout locales package-lock.json package.json sections snippets src templates 
+
+=== goodreads-rating-compiler-firefox-extension
+2024-12-31 Cleanup: Google search scripts removed.
+2024-12-31 Added delay for potential benefit against rate limiters.
+2024-12-29 Support for shouldSkipVolume flag.
+2024-12-29 Support for keywords.
+2024-12-29 Bugfix: Unable to handle rating counts with comma symbol.
+files: README.md background icons manifest.json modules popup 
+
+=== internal-apis
+2023-04-08 Example code removed.
+2023-04-08 Basic logic ready for WFC waitlist.
+files: .gitignore index.js package-lock.json package.json services utils 
+
+=== interview-fe
+2026-07-14 Ready.
+2026-07-13 Project setup.
+files: .dockerignore .gitignore Dockerfile README.md app package-lock.json package.json public react-router.config.ts tsconfig.json vite.config.ts 
+Dockerfile 
+=== java-api-test
+2024-08-20 A basic API in Java that supports only one endpoint.
+files: .gitignore src 
+
+=== lg-remote-be
+2024-07-05 Web app for UI.
+2024-06-29 "Pointer events"
+2024-06-29 Volume control.
+files: .gitignore app.js package-lock.json package.json web 
+
+=== linted
+2026-09-29 Merge pull request #64 from gdebojyoti/22-bullets
+2026-09-29 Say in the glossary how Bullets nest and what deleting one does
+2026-09-29 Add, edit, delete, Enable/Disable, nest and un-nest Bullets
+2026-09-29 Merge pull request #61 from gdebojyoti/21-dates-and-current
+2026-09-29 Set an Entry's dates and mark it Current, rejecting invalid dates
+files: .gitignore AGENTS.md CLAUDE.md CONTEXT.md README.md app components components.json docs eslint-rules eslint.config.mjs lib next.config.ts package-lock.json package.json postcss.config.mjs themes tsconfig.json vitest.config.mts 
+
+=== ludo
+2019-09-14 Create README.md
+2019-04-23 Quite a few things; don't remember details.
+2019-03-13 Movement.
+2018-12-29 Basic grid
+2018-12-29 Project setup.
+files: .babelrc .gitignore README.md package.json scripts src webpack.config.js 
+
+=== ludo-blastoise
+2019-09-21 Prevent last roll value from being used.
+2019-09-20 Merge pull request #1 from gdebojyoti/db
+2019-09-20 More DB syncs.
+2019-09-20 Socket messages optimized.
+2019-09-17 Mongo connection (mlab) demo successful. Match data saved.
+files: .gitignore README.md package-lock.json package.json src 
+
+=== ludo-pikachu
+2019-09-22 Coin UX - pulse coin when applicable. Fix dice roll issue on page refresh.
+2019-09-21 Select color msg.
+2019-09-21 Build script.
+2019-09-20 Share. Coin step sound integrated & commented out.
+2019-09-20 Rolling die sound (temp URL).
+files: .babelrc .gitignore README.md package-lock.json package.json scripts src webpack.config.js 
+
+=== ludo-pikachu-v2
+2023-01-15 Support for Linaria added for CSS. (#1)
+2023-01-15 Update README.md
+2023-01-15 README added.
+2023-01-15 Scaffolding done.
+files: .gitignore README.md babel.config.json config package-lock.json package.json src 
+
+=== main-site
+2026-09-28 Home page UI update. (#9)
+2026-09-28 Minor fixes and clean-up. (#8)
+2026-09-28 Next.js migration. (#7)
+2026-09-28 Toggles in Explorer view. (#6)
+2026-09-27 Misc fixes: Cyberpunk theme updated; resume updated; minor fixes. (#5)
+files: .dockerignore .gitignore AGENTS.md CLAUDE.md Dockerfile README.md app eslint.config.mjs next.config.ts package-lock.json package.json postcss.config.mjs public tsconfig.json vsc 
+Dockerfile 
+=== mini-apps
+2026-07-13 Project setup.
+files: .gitignore package-lock.json package.json public readme.md src webpack.config.js 
+
+=== project-almond
+2024-10-19 A fresh start: reinitialized project using Expo.
+2023-11-06 Initial commit
+files: .gitignore README.md app app.json assets babel.config.js components constants hooks package-lock.json package.json scripts tsconfig.json 
+
+=== project-pipes
+2024-06-08 A basic Next.js application (#1)
+2024-04-23 Repo setup.
+2024-04-23 Readme: scope.
+files: .gitignore README.MD app jsconfig.json package-lock.json package.json 
+
+=== project-tiles
+2024-03-30 Miscellaneous changes & fixes. (#11)
+2024-03-09 Added 8 more levels. (#10)
+2024-03-09 Patch: Readme updated.
+2024-03-09 GA integration. (#9)
+2024-03-02 Tutorial. (#8)
+files: .gitignore README.md index.html package-lock.json package.json src tsconfig.json webpack.config.js 
+
+=== projekt
+2024-12-31 Added pre-commit hook using Husky. (#2)
+2024-12-31 GoodReads v0.1 (#1)
+2024-12-06 Initial commit from Create Next App
+files: .eslintrc.json .gitignore .husky README.md app components data next.config.ts package-lock.json package.json postcss.config.mjs public tailwind.config.ts tsconfig.json types utils 
+
+=== r-Cayde
+2020-12-05 Sample commands.
+2020-12-05 Config JSON used instead of env. Added to ignore list.
+2020-12-05 Support for .env file. Bot token updated.
+2020-12-05 Basic app setup. Ping pong replies.
+files: .gitignore app.js commands package-lock.json package.json 
+
+=== react-experiments
+2023-04-08 Disabled StrictMode.
+2023-04-08 Basic setup.
+2023-04-08 Initialize project using Create React App
+files: .gitignore README.md package-lock.json package.json public src 
+
+=== react-forms-dx
+2021-12-26 0.1.3
+2021-12-26 Package details added.
+2021-12-26 0.1.2
+2021-12-26 main attr fixed
+2021-12-26 0.1.1
+files: .babelrc .gitignore package-lock.json package.json readme.md src webpack.config.js 
+
+=== react-ui
+2024-01-29 Typescript integration. Minor fixes. Demo page & component. (#1)
+2024-01-28 Readme fix.
+2024-01-28 Readme & license files.
+2024-01-28 Project setup.
+files: .gitignore license.md package-lock.json package.json readme.md src tsconfig.json webpack.config.js 
+
+=== sapient-project
+2025-01-26 Link fixed in readme.
+2025-01-26 Cleanup.
+2025-01-26 Readme updated.
+2025-01-26 Cleanup.
+2025-01-26 Components for GalleryItem, Image & Video.
+files: .eslintrc.json .gitignore .husky README.md app components next.config.ts package-lock.json package.json postcss.config.mjs public tailwind.config.ts tsconfig.json types 
+
+=== secret-santa
+2021-12-27 Disabled state for button
+2021-12-26 Google verification.
+2021-12-21 ga events for new event & event details
+2021-12-21 tracking for home page
+2021-12-21 ga setup
+files: .babelrc .gitignore package-lock.json package.json readme.md src webpack 
+
+=== secret-santa-api
+2021-12-21 cookie settings fixed
+2021-12-21 cookie sameSite none
+2021-12-21 test
+2021-12-21 overwrite cookie fix
+2021-12-21 origin updated
+files: .gitignore app.js config.json package-lock.json package.json readme.md routes services 
+
+=== shopify-hello-world
+2022-02-03 Theme name set to "hello world"
+2022-02-03 Theme details updated.
+2022-02-03 Update from Shopify for theme shopify-hello-world/main
+2022-02-03 Update from Shopify for theme shopify-hello-world/main
+2022-02-03 Reverted
+files: .gitignore .theme-check.yml .vscode LICENSE.md README.md assets config layout locales release-notes.md sections snippets templates translation.yml 
+
+=== simpliforms
+2021-12-26 react-forms-dx installed
+2021-12-26 Read me updated.
+2021-12-26 Project setup.
+files: .babelrc .gitignore package-lock.json package.json readme.md src webpack 
+
+=== spring-boot-101
+2024-10-01 Basic project setup. Dependency injection added.
+files: .gitignore .mvn mvnw mvnw.cmd pom.xml src 
+
+=== stonks-2000-be
+2026-09-03 gitignore added.
+files: .gitignore 
+
+=== stonks-2000-fe
+2026-09-02 Initial commit
+files: README.md 
+
+=== tactris
+2018-06-15 Prototype ready.
+files: app.js index.html style.css 
+
+=== tanks-2d
+2022-04-24 Test menu using UI Toolkit.
+2022-04-23 UserSettings added to ignore list.
+2022-04-23 Bugfix: Enemy keeps travelling in current direction for up / down.
+2022-04-23 Editor updated to 2021.3.1f1.
+2022-01-15 Levels and blocks.
+files: .gitignore Assets Packages ProjectSettings 
+
+=== unity-level-maker
+2021-06-25 Code refactor. Load level functionality completed. (#4)
+2021-06-23 Save & load levels. Operations data structure. (#2)
+2021-06-21 Enemy AI. Minor misc changes. (#1)
+2021-06-20 Project setup. Basic editing feature created.
+files: .gitignore Assets Packages ProjectSettings UserSettings readme.md 
+
+=== unity-tpa
+2024-08-10 fix: player no longer gets stuck along ground tiles (#5)
+2024-08-09 feat: arena created; can load map from save file & play game (#3)
+2024-08-07 feat: saving map data to JSON file in "persistent data path" (#2)
+2024-08-07 feat: switch between tile types by selecting UI buttons (#1)
+2024-08-05 feat: basic ui elements added
+files: .gitignore .vsconfig Assets Packages ProjectSettings README.md UIElementsSchema 
+
+=== whitefangcards
+2023-05-28 Form (#1)
+2023-04-10 favicon
+2023-04-09 GA integration.
+2023-04-09 webp & meta tags.
+2023-04-09 Folder renamed.
+files: .gitignore assets css favicon.ico index.html js 
+
+=== wp-plugin-dx-forms
+2021-08-15 Nested blocks. Drag & drop support. Custom block for button. (#3)
+2021-08-09 Display form submissions. `id` prop for fields. (#2)
+2021-08-08 Support for dropdown fields. (#1)
+2021-08-04 Save form meta data to DB on post save.
+2021-08-04 TODO added.
+files: .gitignore externals index.php package-lock.json package.json php readme.md src 
+
+=== wzq
+2025-03-02 Game over scenario. (#9)
+2025-02-28 Game logic in progress: Turns. (#8)
+2025-02-26 Game logic in progress. Support for re-connecting after page reload. (#7)
+2025-02-25 Redux added. (#6)
+2025-02-24 Standard added. (#5)
+files: .eslintrc.json .gitignore .husky app assets next-env.d.ts package-lock.json package.json postcss.config.js readme.md tsconfig.json 
+
+=== wzq.socket
+2025-03-02 Game over scenario. (#4)
+2025-02-28 Game logic in progress: Turns; game completion detection. (#3)
+2025-02-26 Game logic in progress. Support for re-connecting. (#2)
+2025-02-25 Socket IO integration. (#1)
+2025-02-16 Project setup.
+files: .gitignore package-lock.json package.json readme.md src tsconfig.json 
+
+=== xentropolis
+2021-11-06 Inventory item swap. Prefab overrides. Comment fix
+2021-11-05 Basic drag & drop function for inventory.
+2021-10-31 Fix and cleanup.
+2021-10-31 Inventory bar. Refactor.
+2021-10-28 Lambda expression code test.
+files: .gitignore Assets Packages ProjectSettings UserSettings readme.md 
+
+=== xentropoly
+2018-04-22 Merge pull request #5 from gdebojyoti/refactor
+2018-04-22 export used.
+2018-04-22 Allow outline none.
+2018-04-22 Added csslintrc.
+2018-04-22 Codefactor issues rectified.
+files: .csslintrc .gitignore .jshintrc README.md assets css index.php js todo.txt 
+
+=== xentropoly-backend
+2018-05-15 Merge pull request #7 from gdebojyoti/feature-travis
+2018-05-15 Labels updated.
+2018-05-15 Merge pull request #6 from gdebojyoti/feature-travis
+2018-05-15 Create .travis.yml
+2018-04-22 Merge pull request #3 from gdebojyoti/refactor
+files: .gitignore .jshintrc .travis.yml README.md app.js data index.html models package.json services 
+
+=== zeplyn-project
+2025-02-24 V2 (#1)
+2025-02-20 Cleanup.
+2025-02-20 Readme updated.
+2025-02-20 Cleanup using standard.
+2025-02-20 Project ported from CSB.
+files: .gitignore README.md config index.html package-lock.json package.json public src tsconfig.app.json tsconfig.json tsconfig.node.json vite.config.ts 
+
+=== zombie-runner
+2021-07-16 Scriptable objects architecture. Weapon logic updated. Pickup system (weapons only). (#6)
+2021-07-11 Ground updated. (#5)
+2021-07-08 Patches - lane switching & bullet max range (#4)
+2021-07-06 'F' to fire bullet. Collision & bullet logic. (#3)
+2021-07-06 Basic enemy setup. Collision detection enabled. (#2)
+files: .gitignore Assets Packages ProjectSettings UserSettings readme.md 
+
