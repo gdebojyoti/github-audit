@@ -25,6 +25,7 @@ window.AUDIT = {
     { "name": "101-dsa", "status": "public", "action": "Keep", "type": "Learning", "description": "Daily data-structures-and-algorithms practice (\"Day 46: Binary search tree…\")", "notes": "No README", "lastCommit": "2026-09-30" },
     { "name": "101-node", "status": "public", "action": "Keep", "type": "Learning", "description": "Node.js basics (CommonJS → ES modules)", "notes": "No README", "lastCommit": "2026-09-23" },
     { "name": "gdebojyoti", "status": "public", "action": "Keep", "type": "Config", "description": "Profile README shown on the GitHub profile page", "notes": "Needed for the profile", "lastCommit": "2022-02-04" },
+    { "name": "github-audit", "status": "public", "action": "Keep", "type": "Tool", "description": "This audit: a repo tracker page (static site in `docs/`, data in `docs/repos.js`)", "notes": "GitHub Pages: gdebojyoti.github.io/github-audit responds", "lastCommit": "2026-09-30" },
     { "name": "stonks-2000-fe", "status": "public", "action": "Build or delete", "type": "?", "description": "**Unclear.** README is just the title", "notes": "1 open PR (own)", "lastCommit": "2026-09-02" },
     { "name": "stonks-2000-be", "status": "public", "action": "Build or delete", "type": "?", "description": "**Unclear.** Only a `.gitignore`", "notes": "", "lastCommit": "2026-09-03" },
     { "name": "mini-apps", "status": "public", "action": "Build or delete", "type": "Learning", "description": "Setup only. README plans \"OTP input\" and \"Gmail 'to' field\"", "notes": "", "lastCommit": "2026-07-13" },
