@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Repo Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="page-header">
+    <h1>Repo tracker</h1>
+    <p class="subtitle" id="subtitle"></p>
+    <details class="legend">
+      <summary>How to read this</summary>
+      <ul>
+        <li><strong>Status</strong>: <code>public</code> or <code>private</code> visibility on GitHub. Only public repos were audited so far.</li>
+        <li><strong>Last commit</strong>: committer date of the newest commit on the default branch (not GitHub's "updated" date).</li>
+        <li><strong>Action</strong> is a suggestion. Archiving is reversible and read-only, so it's usually safer than deleting.</li>
+        <li>"Responds" means the URL returned HTTP 200 on the audit date. It doesn't confirm that URL serves this app.</li>
+      </ul>
+    </details>
+  </header>
+
+  <main>
+    <section class="summary" id="summary" aria-label="Filter by action"></section>
+
+    <section class="controls" aria-label="Filters">
+      <label class="control control-search">
+        <span>Search</span>
+        <input type="search" id="search" placeholder="Name, description, notes…" autocomplete="off">
+      </label>
+      <label class="control">
+        <span>Action</span>
+        <select id="filter-action"></select>
+      </label>
+      <label class="control">
+        <span>Type</span>
+        <select id="filter-type"></select>
+      </label>
+      <label class="control">
+        <span>Status</span>
+        <select id="filter-status"></select>
+      </label>
+      <button type="button" id="reset" class="reset">Reset</button>
+    </section>
+
+    <p class="count" id="count" aria-live="polite"></p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th data-key="name"><button type="button">Repo</button></th>
+            <th data-key="status"><button type="button">Status</button></th>
+            <th data-key="type"><button type="button">Type</button></th>
+            <th data-key="action"><button type="button">Action</button></th>
+            <th class="col-text">What it is</th>
+            <th class="col-text">Notes</th>
+            <th data-key="lastCommit"><button type="button">Last commit</button></th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+
+    <section class="questions">
+      <h2>Open questions</h2>
+      <ul id="questions"></ul>
+    </section>
+  </main>
+
+  <script src="repos.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
