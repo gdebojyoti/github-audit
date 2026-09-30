@@ -4,7 +4,7 @@
 // Fields
 //   name        GitHub repo name (links to github.com/gdebojyoti/<name>)
 //   status      "public" | "private"
-//   action      "Keep" | "Build or delete" | "Park" | "Archive" | "Delete" | "Fork"
+//   action      "Keep" | "Build or delete" | "Park" | "Archive" | "Delete" | "Fork" | "Deleted"
 //   type        "Product" | "App" | "Game" | "Tool" | "Learning" | "Library" | "Config" | "Fork" | "?"
 //   description What the repo is. **bold** and `code` are rendered.
 //   notes       Evidence / remarks. Same formatting as description.
@@ -80,12 +80,12 @@ window.AUDIT = {
     { "name": "react-forms-dx", "status": "public", "action": "Archive", "type": "Library", "description": "React form component library, versions 0.1.1–0.1.3 in commits", "notes": "npm status not checked", "lastCommit": "2021-12-26" },
     { "name": "react-ui", "status": "public", "action": "Archive", "type": "Library", "description": "React UI component library, setup and demo only", "notes": "", "lastCommit": "2024-01-29" },
     { "name": "css-reset", "status": "public", "action": "Archive", "type": "Config", "description": "A single `reset.css`", "notes": "", "lastCommit": "2016-02-22" },
-    { "name": "ludo", "status": "public", "action": "Delete", "type": "Game", "description": "Old Ludo PWA", "notes": "Own README says \"Discontinued… will be deleted in the future\"", "lastCommit": "2019-09-14" },
+    { "name": "ludo", "status": "public", "action": "Deleted", "type": "Game", "description": "Old Ludo PWA", "notes": "Own README says \"Discontinued… will be deleted in the future\"", "lastCommit": "2019-09-14" },
     { "name": "react-experiments", "status": "public", "action": "Delete", "type": "Learning", "description": "Create React App scaffold plus 1 small change", "notes": "", "lastCommit": "2023-04-08" },
-    { "name": "project-almond", "status": "public", "action": "Delete", "type": "?", "description": "Unmodified default Expo template", "notes": "", "lastCommit": "2024-10-19" },
-    { "name": "shopify-hello-world", "status": "public", "action": "Delete", "type": "Learning", "description": "Copy of Shopify's Dawn theme; README is Dawn's own", "notes": "", "lastCommit": "2022-02-03" },
-    { "name": "java-api-test", "status": "public", "action": "Delete", "type": "Learning", "description": "1 commit, one-endpoint Java API", "notes": "Archiving also fine", "lastCommit": "2024-08-20" },
-    { "name": "spring-boot-101", "status": "public", "action": "Delete", "type": "Learning", "description": "1 commit, basic Spring Boot setup", "notes": "Archiving also fine", "lastCommit": "2024-10-01" },
+    { "name": "project-almond", "status": "public", "action": "Deleted", "type": "?", "description": "Unmodified default Expo template", "notes": "", "lastCommit": "2024-10-19" },
+    { "name": "shopify-hello-world", "status": "public", "action": "Deleted", "type": "Learning", "description": "Copy of Shopify's Dawn theme; README is Dawn's own", "notes": "", "lastCommit": "2022-02-03" },
+    { "name": "java-api-test", "status": "public", "action": "Deleted", "type": "Learning", "description": "1 commit, one-endpoint Java API", "notes": "Archiving also fine", "lastCommit": "2024-08-20" },
+    { "name": "spring-boot-101", "status": "public", "action": "Deleted", "type": "Learning", "description": "1 commit, basic Spring Boot setup", "notes": "Archiving also fine", "lastCommit": "2024-10-01" },
     { "name": "css-drawings", "status": "public", "action": "Fork", "type": "Fork", "description": "Described as \"(deployment only)\". Homepage under debojyotighosh.com/labs returns **404**", "notes": "", "lastCommit": "" },
     { "name": "text-generation-webui", "status": "public", "action": "Fork", "type": "Fork", "description": "Gradio web UI for LLMs (upstream project), forked 2023-12", "notes": "", "lastCommit": "" },
     { "name": "udemy-dl", "status": "public", "action": "Fork", "type": "Fork", "description": "Python script to download Udemy courses, forked 2017", "notes": "", "lastCommit": "" },

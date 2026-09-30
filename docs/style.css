@@ -13,6 +13,7 @@
   --archive-bg: #ecebe6;   --archive-fg: #55544d;
   --delete-bg: #fbe2df;    --delete-fg: #a3321f;
   --fork-bg: #efe6f8;      --fork-fg: #6a3f95;
+  --deleted-bg: #000;      --deleted-fg: #fff;   /* same in dark mode */
 
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   color-scheme: light;
@@ -184,6 +185,7 @@ td.muted { color: var(--muted); }
 .a-archive { background: var(--archive-bg); color: var(--archive-fg); }
 .a-delete  { background: var(--delete-bg);  color: var(--delete-fg); }
 .a-fork    { background: var(--fork-bg);    color: var(--fork-fg); }
+.a-deleted { background: var(--deleted-bg); color: var(--deleted-fg); }
 
 .empty { padding: 24px; text-align: center; color: var(--muted); }
 

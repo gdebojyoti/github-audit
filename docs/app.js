@@ -1,7 +1,8 @@
 (function () {
   const { owner, auditDate, openQuestions, repos } = window.AUDIT;
 
-  const ACTIONS = ["Keep", "Build or delete", "Park", "Archive", "Delete", "Fork"];
+  const DELETED = "Deleted";
+  const ACTIONS = ["Keep", "Build or delete", "Park", "Archive", "Delete", "Fork", DELETED];
   const ACTION_CLASS = {
     "Keep": "a-keep",
     "Build or delete": "a-build",
@@ -9,7 +10,11 @@
     "Archive": "a-archive",
     "Delete": "a-delete",
     "Fork": "a-fork",
+    [DELETED]: "a-deleted",
   };
+
+  // Deleted repos are hidden unless the Deleted filter is explicitly selected.
+  const inPool = (r) => (state.action === DELETED) === (r.action === DELETED);
 
   const state = { search: "", action: "", type: "", status: "", sortKey: "action", sortDir: 1 };
 
@@ -59,6 +64,7 @@
   }
 
   function matches(r) {
+    if (!inPool(r)) return false;
     if (state.action && r.action !== state.action) return false;
     if (state.type && r.type !== state.type) return false;
     if (state.status && r.status !== state.status) return false;
@@ -78,7 +84,9 @@
     } else {
       tbody.innerHTML = list.map((r) => `
         <tr>
-          <td class="name"><a href="https://github.com/${owner}/${encodeURIComponent(r.name)}" target="_blank" rel="noopener">${escapeHtml(r.name)}</a></td>
+          <td class="name">${r.action === DELETED
+            ? escapeHtml(r.name)
+            : `<a href="https://github.com/${owner}/${encodeURIComponent(r.name)}" target="_blank" rel="noopener">${escapeHtml(r.name)}</a>`}</td>
           <td>${escapeHtml(r.status)}</td>
           <td>${escapeHtml(r.type)}</td>
           <td><span class="badge ${ACTION_CLASS[r.action] || ""}">${escapeHtml(r.action)}</span></td>
@@ -88,9 +96,11 @@
         </tr>`).join("");
     }
 
-    $("count").textContent = list.length === repos.length
-      ? `Showing all ${repos.length} repos`
-      : `Showing ${list.length} of ${repos.length} repos`;
+    const poolSize = repos.filter(inPool).length;
+    const noun = state.action === DELETED ? "deleted repos" : "repos";
+    $("count").textContent = list.length === poolSize
+      ? `Showing all ${poolSize} ${noun}`
+      : `Showing ${list.length} of ${poolSize} ${noun}`;
 
     document.querySelectorAll("th[data-key]").forEach((th) => {
       if (th.dataset.key === state.sortKey) {
@@ -115,12 +125,15 @@
   }
 
   function init() {
-    const publicCount = repos.filter((r) => r.status === "public").length;
-    const privateCount = repos.filter((r) => r.status === "private").length;
-    const forkCount = repos.filter((r) => r.action === "Fork").length;
+    const existing = repos.filter((r) => r.action !== DELETED);
+    const publicCount = existing.filter((r) => r.status === "public").length;
+    const privateCount = existing.filter((r) => r.status === "private").length;
+    const forkCount = existing.filter((r) => r.action === "Fork").length;
+    const deletedCount = repos.length - existing.length;
     $("subtitle").innerHTML =
       `Repos under <a href="https://github.com/${owner}" target="_blank" rel="noopener">github.com/${owner}</a>, ` +
-      `audited ${escapeHtml(auditDate)}. ${repos.length} repos: ${publicCount} public, ${privateCount} private, ${forkCount} forks.`;
+      `audited ${escapeHtml(auditDate)}. ${existing.length} repos: ${publicCount} public, ${privateCount} private, ${forkCount} forks` +
+      (deletedCount ? `, plus ${deletedCount} deleted.` : ".");
 
     fillSelect($("filter-action"), "actions", ACTIONS.filter((a) => repos.some((r) => r.action === a)));
     fillSelect($("filter-type"), "types", uniqueSorted("type"));
