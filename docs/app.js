@@ -27,12 +27,24 @@
       .replace(/"/g, "&quot;");
   }
 
-  // Supports the two bits of Markdown used in repos.js: **bold** and `code`.
+  // Supports the bits of Markdown used in repos.js: **bold**, *italic* and `code`.
   function inlineMd(s) {
     return escapeHtml(s)
       .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+      .replace(/\*(.+?)\*/g, "<em>$1</em>")
       .replace(/`(.+?)`/g, "<code>$1</code>");
   }
+
+  const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+  // "2026-09-30" -> "Sep 30, 2026". Parsed by hand so the time zone can't shift the day.
+  function formatDate(iso) {
+    const [y, m, d] = iso.split("-").map(Number);
+    return `${MONTHS[m - 1]} ${d}, ${y}`;
+  }
+
+  // Formats every full YYYY-MM-DD date inside a text field.
+  const formatDatesIn = (s) => s.replace(/\b(\d{4}-\d{2}-\d{2})\b/g, (iso) => formatDate(iso));
 
   function uniqueSorted(key) {
     return [...new Set(repos.map((r) => r[key]).filter(Boolean))].sort((a, b) => a.localeCompare(b));
@@ -90,8 +102,8 @@
           <td>${escapeHtml(r.type)}</td>
           <td><span class="badge ${STATUS_CLASS[r.status] || ""}">${escapeHtml(r.status)}</span></td>
           <td class="text">${inlineMd(r.description)}</td>
-          <td class="text muted">${inlineMd(r.notes)}</td>
-          <td class="date">${r.lastCommit ? escapeHtml(r.lastCommit) : '<span class="muted">none</span>'}</td>
+          <td class="text muted">${inlineMd(formatDatesIn(r.notes))}</td>
+          <td class="date">${r.lastCommit ? escapeHtml(formatDate(r.lastCommit)) : '<span class="muted">none</span>'}</td>
         </tr>`).join("");
     }
 
