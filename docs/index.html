@@ -13,16 +13,16 @@
     <details class="legend">
       <summary>How to read this</summary>
       <ul>
-        <li><strong>Status</strong>: <code>public</code> or <code>private</code> visibility on GitHub. Only public repos were audited so far.</li>
+        <li><strong>Visibility</strong>: <code>public</code> or <code>private</code> on GitHub. Only public repos were audited so far.</li>
+        <li><strong>Status</strong>: where the repo stands. "To archive" and "To delete" are planned, not done yet. Archiving is reversible and read-only, so it's usually safer than deleting.</li>
         <li><strong>Last commit</strong>: committer date of the newest commit on the default branch (not GitHub's "updated" date).</li>
-        <li><strong>Action</strong> is a suggestion. Archiving is reversible and read-only, so it's usually safer than deleting.</li>
         <li>"Responds" means the URL returned HTTP 200 on the audit date. It doesn't confirm that URL serves this app.</li>
       </ul>
     </details>
   </header>
 
   <main>
-    <section class="summary" id="summary" aria-label="Filter by action"></section>
+    <section class="summary" id="summary" aria-label="Filter by status"></section>
 
     <section class="controls" aria-label="Filters">
       <label class="control control-search">
@@ -30,16 +30,16 @@
         <input type="search" id="search" placeholder="Name, description, notes…" autocomplete="off">
       </label>
       <label class="control">
-        <span>Action</span>
-        <select id="filter-action"></select>
+        <span>Status</span>
+        <select id="filter-status"></select>
       </label>
       <label class="control">
         <span>Type</span>
         <select id="filter-type"></select>
       </label>
       <label class="control">
-        <span>Status</span>
-        <select id="filter-status"></select>
+        <span>Visibility</span>
+        <select id="filter-visibility"></select>
       </label>
       <button type="button" id="reset" class="reset">Reset</button>
     </section>
@@ -51,9 +51,9 @@
         <thead>
           <tr>
             <th data-key="name"><button type="button">Repo</button></th>
-            <th data-key="status"><button type="button">Status</button></th>
+            <th data-key="visibility"><button type="button">Visibility</button></th>
             <th data-key="type"><button type="button">Type</button></th>
-            <th data-key="action"><button type="button">Action</button></th>
+            <th data-key="status"><button type="button">Status</button></th>
             <th class="col-text">What it is</th>
             <th class="col-text">Notes</th>
             <th data-key="lastCommit"><button type="button">Last commit</button></th>

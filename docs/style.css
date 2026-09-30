@@ -8,11 +8,10 @@
   --row-hover: #f1f1ed;
 
   --active-bg: #dff3e4;    --active-fg: #1d6b35;
-  --build-bg: #fdf0d5;     --build-fg: #875a00;
-  --park-bg: #e3ecfb;      --park-fg: #2a4f9c;
-  --archive-bg: #ecebe6;   --archive-fg: #55544d;
-  --delete-bg: #fbe2df;    --delete-fg: #a3321f;
-  --fork-bg: #efe6f8;      --fork-fg: #6a3f95;
+  --undecided-bg: #fdf0d5; --undecided-fg: #875a00;
+  --parked-bg: #e3ecfb;    --parked-fg: #2a4f9c;
+  --to-archive-bg: #ecebe6; --to-archive-fg: #55544d;
+  --to-delete-bg: #fbe2df; --to-delete-fg: #a3321f;
   --deleted-bg: #000;      --deleted-fg: #fff;   /* same in dark mode */
 
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -30,11 +29,10 @@
     --row-hover: #262623;
 
     --active-bg: #1f3a27;    --active-fg: #9fdcb0;
-    --build-bg: #3d3116;     --build-fg: #f0cd82;
-    --park-bg: #1f2d4a;      --park-fg: #a9c1f5;
-    --archive-bg: #2e2d29;   --archive-fg: #c2c0b7;
-    --delete-bg: #45221c;    --delete-fg: #f3aa9c;
-    --fork-bg: #34264a;      --fork-fg: #d2b6f2;
+    --undecided-bg: #3d3116; --undecided-fg: #f0cd82;
+    --parked-bg: #1f2d4a;    --parked-fg: #a9c1f5;
+    --to-archive-bg: #2e2d29; --to-archive-fg: #c2c0b7;
+    --to-delete-bg: #45221c; --to-delete-fg: #f3aa9c;
 
     color-scheme: dark;
   }
@@ -179,13 +177,12 @@ td.muted { color: var(--muted); }
   white-space: nowrap;
 }
 
-.a-active  { background: var(--active-bg);  color: var(--active-fg); }
-.a-build   { background: var(--build-bg);   color: var(--build-fg); }
-.a-park    { background: var(--park-bg);    color: var(--park-fg); }
-.a-archive { background: var(--archive-bg); color: var(--archive-fg); }
-.a-delete  { background: var(--delete-bg);  color: var(--delete-fg); }
-.a-fork    { background: var(--fork-bg);    color: var(--fork-fg); }
-.a-deleted { background: var(--deleted-bg); color: var(--deleted-fg); }
+.s-active     { background: var(--active-bg);     color: var(--active-fg); }
+.s-undecided  { background: var(--undecided-bg);  color: var(--undecided-fg); }
+.s-parked     { background: var(--parked-bg);     color: var(--parked-fg); }
+.s-to-archive { background: var(--to-archive-bg); color: var(--to-archive-fg); }
+.s-to-delete  { background: var(--to-delete-bg);  color: var(--to-delete-fg); }
+.s-deleted    { background: var(--deleted-bg);    color: var(--deleted-fg); }
 
 .empty { padding: 24px; text-align: center; color: var(--muted); }
 

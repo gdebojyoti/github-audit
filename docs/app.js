@@ -2,21 +2,20 @@
   const { owner, auditDate, openQuestions, repos } = window.AUDIT;
 
   const DELETED = "Deleted";
-  const ACTIONS = ["Active", "Build or delete", "Park", "Archive", "Delete", "Fork", DELETED];
-  const ACTION_CLASS = {
-    "Active": "a-active",
-    "Build or delete": "a-build",
-    "Park": "a-park",
-    "Archive": "a-archive",
-    "Delete": "a-delete",
-    "Fork": "a-fork",
-    [DELETED]: "a-deleted",
+  const STATUSES = ["Active", "Undecided", "Parked", "To archive", "To delete", DELETED];
+  const STATUS_CLASS = {
+    "Active": "s-active",
+    "Undecided": "s-undecided",
+    "Parked": "s-parked",
+    "To archive": "s-to-archive",
+    "To delete": "s-to-delete",
+    [DELETED]: "s-deleted",
   };
 
   // Deleted repos are hidden unless the Deleted filter is explicitly selected.
-  const inPool = (r) => (state.action === DELETED) === (r.action === DELETED);
+  const inPool = (r) => (state.status === DELETED) === (r.status === DELETED);
 
-  const state = { search: "", action: "", type: "", status: "", sortKey: "action", sortDir: 1 };
+  const state = { search: "", status: "", type: "", visibility: "", sortKey: "status", sortDir: 1 };
 
   const $ = (id) => document.getElementById(id);
 
@@ -49,9 +48,9 @@
     let x = a[sortKey];
     let y = b[sortKey];
 
-    if (sortKey === "action") {
-      x = ACTIONS.indexOf(x);
-      y = ACTIONS.indexOf(y);
+    if (sortKey === "status") {
+      x = STATUSES.indexOf(x);
+      y = STATUSES.indexOf(y);
     } else if (sortKey === "lastCommit") {
       // Repos with no commit always go last, whichever direction.
       if (!x && !y) return a.name.localeCompare(b.name);
@@ -65,11 +64,11 @@
 
   function matches(r) {
     if (!inPool(r)) return false;
-    if (state.action && r.action !== state.action) return false;
-    if (state.type && r.type !== state.type) return false;
     if (state.status && r.status !== state.status) return false;
+    if (state.type && r.type !== state.type) return false;
+    if (state.visibility && r.visibility !== state.visibility) return false;
     if (state.search) {
-      const hay = `${r.name} ${r.description} ${r.notes} ${r.type} ${r.action}`.toLowerCase();
+      const hay = `${r.name} ${r.description} ${r.notes} ${r.type} ${r.status}`.toLowerCase();
       if (!hay.includes(state.search)) return false;
     }
     return true;
@@ -84,12 +83,12 @@
     } else {
       tbody.innerHTML = list.map((r) => `
         <tr>
-          <td class="name">${r.action === DELETED
+          <td class="name">${r.status === DELETED
             ? escapeHtml(r.name)
             : `<a href="https://github.com/${owner}/${encodeURIComponent(r.name)}" target="_blank" rel="noopener">${escapeHtml(r.name)}</a>`}</td>
-          <td>${escapeHtml(r.status)}</td>
+          <td>${escapeHtml(r.visibility)}</td>
           <td>${escapeHtml(r.type)}</td>
-          <td><span class="badge ${ACTION_CLASS[r.action] || ""}">${escapeHtml(r.action)}</span></td>
+          <td><span class="badge ${STATUS_CLASS[r.status] || ""}">${escapeHtml(r.status)}</span></td>
           <td class="text">${inlineMd(r.description)}</td>
           <td class="text muted">${inlineMd(r.notes)}</td>
           <td class="date">${r.lastCommit ? escapeHtml(r.lastCommit) : '<span class="muted">none</span>'}</td>
@@ -97,7 +96,7 @@
     }
 
     const poolSize = repos.filter(inPool).length;
-    const noun = state.action === DELETED ? "deleted repos" : "repos";
+    const noun = state.status === DELETED ? "deleted repos" : "repos";
     $("count").textContent = list.length === poolSize
       ? `Showing all ${poolSize} ${noun}`
       : `Showing ${list.length} of ${poolSize} ${noun}`;
@@ -111,33 +110,34 @@
     });
 
     document.querySelectorAll(".chip").forEach((chip) => {
-      chip.setAttribute("aria-pressed", String(chip.dataset.action === state.action));
+      chip.setAttribute("aria-pressed", String(chip.dataset.status === state.status));
     });
   }
 
   function renderSummary() {
     const counts = {};
-    repos.forEach((r) => { counts[r.action] = (counts[r.action] || 0) + 1; });
-    $("summary").innerHTML = ACTIONS.filter((a) => counts[a]).map((a) => `
-      <button type="button" class="chip ${ACTION_CLASS[a]}" data-action="${escapeHtml(a)}" aria-pressed="false">
-        ${escapeHtml(a)}<strong>${counts[a]}</strong>
+    repos.forEach((r) => { counts[r.status] = (counts[r.status] || 0) + 1; });
+    $("summary").innerHTML = STATUSES.filter((s) => counts[s]).map((s) => `
+      <button type="button" class="chip ${STATUS_CLASS[s]}" data-status="${escapeHtml(s)}" aria-pressed="false">
+        ${escapeHtml(s)}<strong>${counts[s]}</strong>
       </button>`).join("");
   }
 
   function init() {
-    const existing = repos.filter((r) => r.action !== DELETED);
-    const publicCount = existing.filter((r) => r.status === "public").length;
-    const privateCount = existing.filter((r) => r.status === "private").length;
-    const forkCount = existing.filter((r) => r.action === "Fork").length;
+    const existing = repos.filter((r) => r.status !== DELETED);
+    const publicCount = existing.filter((r) => r.visibility === "public").length;
+    const privateCount = existing.filter((r) => r.visibility === "private").length;
+    const forkCount = existing.filter((r) => r.type === "Fork").length;
     const deletedCount = repos.length - existing.length;
     $("subtitle").innerHTML =
       `Repos under <a href="https://github.com/${owner}" target="_blank" rel="noopener">github.com/${owner}</a>, ` +
-      `audited ${escapeHtml(auditDate)}. ${existing.length} repos: ${publicCount} public, ${privateCount} private, ${forkCount} forks` +
+      `audited ${escapeHtml(auditDate)}. ${existing.length} repos: ${publicCount} public, ${privateCount} private, ` +
+      `${forkCount} ${forkCount === 1 ? "fork" : "forks"}` +
       (deletedCount ? `, plus ${deletedCount} deleted.` : ".");
 
-    fillSelect($("filter-action"), "actions", ACTIONS.filter((a) => repos.some((r) => r.action === a)));
+    fillSelect($("filter-status"), "statuses", STATUSES.filter((s) => repos.some((r) => r.status === s)));
     fillSelect($("filter-type"), "types", uniqueSorted("type"));
-    fillSelect($("filter-status"), "statuses", uniqueSorted("status"));
+    fillSelect($("filter-visibility"), "visibilities", uniqueSorted("visibility"));
 
     $("questions").innerHTML = openQuestions.map((q) => `<li>${inlineMd(q)}</li>`).join("");
 
@@ -148,7 +148,7 @@
       renderRows();
     });
 
-    [["filter-action", "action"], ["filter-type", "type"], ["filter-status", "status"]].forEach(([id, key]) => {
+    [["filter-status", "status"], ["filter-type", "type"], ["filter-visibility", "visibility"]].forEach(([id, key]) => {
       $(id).addEventListener("change", (e) => {
         state[key] = e.target.value;
         renderRows();
@@ -158,8 +158,8 @@
     $("summary").addEventListener("click", (e) => {
       const chip = e.target.closest(".chip");
       if (!chip) return;
-      state.action = state.action === chip.dataset.action ? "" : chip.dataset.action;
-      $("filter-action").value = state.action;
+      state.status = state.status === chip.dataset.status ? "" : chip.dataset.status;
+      $("filter-status").value = state.status;
       renderRows();
     });
 
@@ -178,11 +178,11 @@
     });
 
     $("reset").addEventListener("click", () => {
-      Object.assign(state, { search: "", action: "", type: "", status: "", sortKey: "action", sortDir: 1 });
+      Object.assign(state, { search: "", status: "", type: "", visibility: "", sortKey: "status", sortDir: 1 });
       $("search").value = "";
-      $("filter-action").value = "";
-      $("filter-type").value = "";
       $("filter-status").value = "";
+      $("filter-type").value = "";
+      $("filter-visibility").value = "";
       renderRows();
     });
 
