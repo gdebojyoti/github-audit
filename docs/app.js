@@ -143,7 +143,7 @@
     const deletedCount = repos.length - existing.length;
     $("subtitle").innerHTML =
       `Repos under <a href="https://github.com/${owner}" target="_blank" rel="noopener">github.com/${owner}</a>, ` +
-      `audited ${escapeHtml(auditDate)}. ${existing.length} repos: ${publicCount} public, ${privateCount} private, ` +
+      `audited ${escapeHtml(formatDate(auditDate))}. ${existing.length} repos: ${publicCount} public, ${privateCount} private, ` +
       `${forkCount} ${forkCount === 1 ? "fork" : "forks"}` +
       (deletedCount ? `, plus ${deletedCount} deleted.` : ".");
 
