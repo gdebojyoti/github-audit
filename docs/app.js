@@ -2,9 +2,9 @@
   const { owner, auditDate, openQuestions, repos } = window.AUDIT;
 
   const DELETED = "Deleted";
-  const ACTIONS = ["Keep", "Build or delete", "Park", "Archive", "Delete", "Fork", DELETED];
+  const ACTIONS = ["Active", "Build or delete", "Park", "Archive", "Delete", "Fork", DELETED];
   const ACTION_CLASS = {
-    "Keep": "a-keep",
+    "Active": "a-active",
     "Build or delete": "a-build",
     "Park": "a-park",
     "Archive": "a-archive",

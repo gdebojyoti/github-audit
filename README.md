@@ -1,6 +1,6 @@
 # GitHub repo audit
 
-An audit of the (public) repos under [github.com/gdebojyoti](https://github.com/gdebojyoti/). Each repo gets a short description, its last commit date, and a suggested action: keep, build or delete, park, archive, or delete.
+An audit of the (public) repos under [github.com/gdebojyoti](https://github.com/gdebojyoti/). Each repo gets a short description, its last commit date, and an action: active, build or delete, park, archive, or delete. Repos that have already been deleted stay in the data as "Deleted" and only show up when that filter is selected.
 
 **View the tracker:** https://gdebojyoti.github.io/github-audit/
 

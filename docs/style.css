@@ -7,7 +7,7 @@
   --accent: #2f5fd0;
   --row-hover: #f1f1ed;
 
-  --keep-bg: #dff3e4;      --keep-fg: #1d6b35;
+  --active-bg: #dff3e4;    --active-fg: #1d6b35;
   --build-bg: #fdf0d5;     --build-fg: #875a00;
   --park-bg: #e3ecfb;      --park-fg: #2a4f9c;
   --archive-bg: #ecebe6;   --archive-fg: #55544d;
@@ -29,7 +29,7 @@
     --accent: #8aaaf5;
     --row-hover: #262623;
 
-    --keep-bg: #1f3a27;      --keep-fg: #9fdcb0;
+    --active-bg: #1f3a27;    --active-fg: #9fdcb0;
     --build-bg: #3d3116;     --build-fg: #f0cd82;
     --park-bg: #1f2d4a;      --park-fg: #a9c1f5;
     --archive-bg: #2e2d29;   --archive-fg: #c2c0b7;
@@ -179,7 +179,7 @@ td.muted { color: var(--muted); }
   white-space: nowrap;
 }
 
-.a-keep    { background: var(--keep-bg);    color: var(--keep-fg); }
+.a-active  { background: var(--active-bg);  color: var(--active-fg); }
 .a-build   { background: var(--build-bg);   color: var(--build-fg); }
 .a-park    { background: var(--park-bg);    color: var(--park-fg); }
 .a-archive { background: var(--archive-bg); color: var(--archive-fg); }

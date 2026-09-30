@@ -4,7 +4,7 @@
 // Fields
 //   name        GitHub repo name (links to github.com/gdebojyoti/<name>)
 //   status      "public" | "private"
-//   action      "Keep" | "Build or delete" | "Park" | "Archive" | "Delete" | "Fork" | "Deleted"
+//   action      "Active" | "Build or delete" | "Park" | "Archive" | "Delete" | "Fork" | "Deleted"
 //   type        "Product" | "App" | "Game" | "Tool" | "Learning" | "Library" | "Config" | "Fork" | "?"
 //   description What the repo is. **bold** and `code` are rendered.
 //   notes       Evidence / remarks. Same formatting as description.
@@ -17,12 +17,12 @@ window.AUDIT = {
     "**Private repos**: not audited yet."
   ],
   repos: [
-    { "name": "linted", "status": "public", "action": "Keep", "type": "Product", "description": "Resume builder (Next.js). **Linted.**", "notes": "PRs merged daily; 14 open issues, all own (backlog/ideas)", "lastCommit": "2026-09-29" },
-    { "name": "main-site", "status": "public", "action": "Keep", "type": "Product", "description": "Personal site styled like VS Code, with themes and a terminal (Next.js, Dockerfile). **Portfolio.**", "notes": "debojyotighosh.com responds", "lastCommit": "2026-09-28" },
-    { "name": "101-dsa", "status": "public", "action": "Keep", "type": "Learning", "description": "Daily data-structures-and-algorithms practice (\"Day 46: Binary search tree…\")", "notes": "No README", "lastCommit": "2026-09-30" },
-    { "name": "101-node", "status": "public", "action": "Keep", "type": "Learning", "description": "Node.js basics (CommonJS → ES modules)", "notes": "No README", "lastCommit": "2026-09-23" },
-    { "name": "gdebojyoti", "status": "public", "action": "Keep", "type": "Config", "description": "Profile README shown on the GitHub profile page", "notes": "Needed for the profile", "lastCommit": "2022-02-04" },
-    { "name": "github-audit", "status": "public", "action": "Keep", "type": "Tool", "description": "This audit: a repo tracker page (static site in `docs/`, data in `docs/repos.js`)", "notes": "GitHub Pages: gdebojyoti.github.io/github-audit responds", "lastCommit": "2026-09-30" },
+    { "name": "linted", "status": "public", "action": "Active", "type": "Product", "description": "Resume builder (Next.js). **Linted.**", "notes": "PRs merged daily; 14 open issues, all own (backlog/ideas)", "lastCommit": "2026-09-29" },
+    { "name": "main-site", "status": "public", "action": "Active", "type": "Product", "description": "Personal site styled like VS Code, with themes and a terminal (Next.js, Dockerfile). **Portfolio.**", "notes": "debojyotighosh.com responds", "lastCommit": "2026-09-28" },
+    { "name": "101-dsa", "status": "public", "action": "Active", "type": "Learning", "description": "Daily data-structures-and-algorithms practice (\"Day 46: Binary search tree…\")", "notes": "No README", "lastCommit": "2026-09-30" },
+    { "name": "101-node", "status": "public", "action": "Active", "type": "Learning", "description": "Node.js basics (CommonJS → ES modules)", "notes": "No README", "lastCommit": "2026-09-23" },
+    { "name": "gdebojyoti", "status": "public", "action": "Active", "type": "Config", "description": "Profile README shown on the GitHub profile page", "notes": "Needed for the profile", "lastCommit": "2022-02-04" },
+    { "name": "github-audit", "status": "public", "action": "Active", "type": "Tool", "description": "This audit: a repo tracker page (static site in `docs/`, data in `docs/repos.js`)", "notes": "GitHub Pages: gdebojyoti.github.io/github-audit responds", "lastCommit": "2026-09-30" },
     { "name": "stonks-2000-fe", "status": "public", "action": "Build or delete", "type": "Game", "description": "Front end of a web-based stock-market game (per owner). README is just the title", "notes": "1 open PR (own)", "lastCommit": "2026-09-02" },
     { "name": "stonks-2000-be", "status": "public", "action": "Build or delete", "type": "Game", "description": "Back end of a web-based stock-market game (per owner). Only a `.gitignore` so far", "notes": "", "lastCommit": "2026-09-03" },
     { "name": "mini-apps", "status": "public", "action": "Build or delete", "type": "Learning", "description": "Setup only. README plans \"OTP input\" and \"Gmail 'to' field\"", "notes": "", "lastCommit": "2026-07-13" },
@@ -50,7 +50,7 @@ window.AUDIT = {
     { "name": "internal-apis", "status": "public", "action": "Archive", "type": "App", "description": "Express API \"for my personal projects\"; its only endpoint saves emails to Google Sheets", "notes": "A commit says \"WFC waitlist\"; link to whitefangcards **not confirmed**", "lastCommit": "2023-04-08" },
     { "name": "lg-remote-be", "status": "public", "action": "Archive", "type": "Tool", "description": "Local LG TV remote (lgtv2, network discovery, web UI)", "notes": "", "lastCommit": "2024-07-05" },
     { "name": "chat-gpt-bot", "status": "public", "action": "Deleted", "type": "Learning", "description": "OpenAI quickstart example, reworked toward a chatbot", "notes": "", "lastCommit": "2023-04-11" },
-    { "name": "r-Cayde", "status": "public", "action": "Archive", "type": "Tool", "description": "Discord bot for Destiny 2; only ping/sample commands", "notes": "", "lastCommit": "2020-12-05" },
+    { "name": "r-Cayde", "status": "public", "action": "Deleted", "type": "Tool", "description": "Discord bot for Destiny 2; only ping/sample commands", "notes": "", "lastCommit": "2020-12-05" },
     { "name": "bricklink-price-finder-firefox-extension", "status": "public", "action": "Archive", "type": "Tool", "description": "Firefox extension that finds the best BrickLink price across URLs", "notes": "Separate from the Chrome one", "lastCommit": "2024-12-11" },
     { "name": "goodreads-rating-compiler-firefox-extension", "status": "public", "action": "Archive", "type": "Tool", "description": "Firefox extension that compiled Goodreads ratings to help build a personal reading list (per owner)", "notes": "README says \"{TBD}\"", "lastCommit": "2024-12-31" },
     { "name": "CS2Mod", "status": "public", "action": "Archive", "type": "Tool", "description": "UI mod for Cities: Skylines II (C#, `Colossal`/`Game.Modding` namespaces)", "notes": "README is just a title", "lastCommit": "2024-07-21" },
