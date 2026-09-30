@@ -43,7 +43,7 @@ window.AUDIT = {
     { "name": "secret-santa", "visibility": "public", "status": "To archive", "type": "App", "description": "Secret Santa event web app", "notes": "", "lastCommit": "2021-12-27" },
     { "name": "secret-santa-api", "visibility": "public", "status": "To archive", "type": "App", "description": "API for secret-santa (Express, MongoDB, SendGrid)", "notes": "", "lastCommit": "2021-12-21" },
     { "name": "simpliforms", "visibility": "public", "status": "Deleted", "type": "App", "description": "Form builder, setup only", "notes": "package.json still named \"secret-santa\"", "lastCommit": "2021-12-26" },
-    { "name": "wp-plugin-dx-forms", "visibility": "public", "status": "To archive", "type": "App", "description": "WordPress form-builder plugin", "notes": "1 open PR", "lastCommit": "2021-08-15" },
+    { "name": "wp-plugin-dx-forms", "visibility": "public", "status": "Deleted", "type": "App", "description": "WordPress form-builder plugin", "notes": "1 open PR", "lastCommit": "2021-08-15" },
     { "name": "geralt-shopify", "visibility": "public", "status": "To archive", "type": "App", "description": "Shopify theme (Liquid, Sass, AlpineJS)", "notes": "1 open PR", "lastCommit": "2023-09-03" },
     { "name": "genshin-db", "visibility": "public", "status": "Deleted", "type": "App", "description": "Genshin Impact character and adventure-rank site (judging by source folders)", "notes": "No README", "lastCommit": "2021-11-28" },
     { "name": "whitefangcards", "visibility": "public", "status": "To archive", "type": "App", "description": "Landing page, titled \"Astro Premium Playing Cards | White Fang Cards\"; 31 MB", "notes": "No README", "lastCommit": "2023-05-28" },
