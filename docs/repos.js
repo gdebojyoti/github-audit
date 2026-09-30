@@ -88,6 +88,6 @@ window.AUDIT = {
     { "name": "spring-boot-101", "status": "public", "action": "Deleted", "type": "Learning", "description": "1 commit, basic Spring Boot setup", "notes": "Archiving also fine", "lastCommit": "2024-10-01" },
     { "name": "css-drawings", "status": "public", "action": "Fork", "type": "Fork", "description": "Described as \"(deployment only)\". Homepage under debojyotighosh.com/labs returns **404**", "notes": "", "lastCommit": "" },
     { "name": "text-generation-webui", "status": "public", "action": "Fork", "type": "Fork", "description": "Gradio web UI for LLMs (upstream project), forked 2023-12", "notes": "", "lastCommit": "" },
-    { "name": "udemy-dl", "status": "public", "action": "Fork", "type": "Fork", "description": "Python script to download Udemy courses, forked 2017", "notes": "", "lastCommit": "" },
+    // { "name": "udemy-dl", "status": "public", "action": "Fork", "type": "Fork", "description": "Python script to download Udemy courses, forked 2017", "notes": "", "lastCommit": "" },
   ],
 };
