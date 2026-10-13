@@ -27,9 +27,10 @@
       .replace(/"/g, "&quot;");
   }
 
-  // Supports the bits of Markdown used in repos.js: **bold**, *italic* and `code`.
+  // Supports the bits of Markdown used in repos.js: [links](https://…), **bold**, *italic* and `code`.
   function inlineMd(s) {
     return escapeHtml(s)
+      .replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
       .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
       .replace(/\*(.+?)\*/g, "<em>$1</em>")
       .replace(/`(.+?)`/g, "<code>$1</code>");
