@@ -6,35 +6,36 @@
 //   visibility  "public" | "private"
 //   status      "Active" | "Undecided" | "Parked" | "To archive" | "To delete" | "Deleted"
 //   type        "Product" | "App" | "Game" | "Tool" | "Learning" | "Library" | "Config" | "Fork" | "?"
-//   description What the repo is. **bold**, *italic* and `code` are rendered.
+//   description What the repo is. [links](https://…), **bold**, *italic* and `code` are rendered.
 //   notes       Evidence / remarks. Same formatting as description.
 //   lastCommit  "YYYY-MM-DD" (committer date on the default branch), or "" if none
 
 window.AUDIT = {
   owner: "gdebojyoti",
-  auditDate: "2026-09-30",
+  auditDate: "2026-10-13",
   openQuestions: [
     "**Private repos**: not audited yet."
   ],
   repos: [
-    { "name": "linted", "visibility": "public", "status": "Active", "type": "Product", "description": "Resume builder (Next.js). **Linted.**", "notes": "PRs merged daily; 14 open issues, all own (backlog/ideas)", "lastCommit": "2026-09-29" },
-    { "name": "main-site", "visibility": "public", "status": "Active", "type": "Product", "description": "Personal site styled like VS Code, with themes and a terminal (Next.js, Dockerfile). **Portfolio.**", "notes": "debojyotighosh.com responds", "lastCommit": "2026-09-28" },
-    { "name": "101-dsa", "visibility": "public", "status": "Active", "type": "Learning", "description": "Daily data-structures-and-algorithms practice (\"Day 46: Binary search tree…\")", "notes": "No README", "lastCommit": "2026-09-30" },
+    { "name": "linted", "visibility": "public", "status": "Active", "type": "Product", "description": "Resume builder (Next.js). **Linted.**", "notes": "PRs merged daily; 5 open issues, all own (backlog/ideas)", "lastCommit": "2026-10-05" },
+    { "name": "main-site", "visibility": "public", "status": "Active", "type": "Product", "description": "Personal site styled like VS Code, with themes and a terminal (Next.js, Dockerfile). **Portfolio.**", "notes": "[debojyotighosh.com](https://debojyotighosh.com) responds", "lastCommit": "2026-10-09" },
+    { "name": "101-dsa", "visibility": "public", "status": "Active", "type": "Learning", "description": "Daily data-structures-and-algorithms practice (\"Day 46: Binary search tree…\")", "notes": "No README", "lastCommit": "2026-10-13" },
     { "name": "101-node", "visibility": "public", "status": "Active", "type": "Learning", "description": "Node.js basics (CommonJS → ES modules)", "notes": "No README", "lastCommit": "2026-09-23" },
     { "name": "gdebojyoti", "visibility": "public", "status": "Active", "type": "Config", "description": "Profile README shown on the GitHub profile page", "notes": "Needed for the profile", "lastCommit": "2022-02-04" },
-    { "name": "github-audit", "visibility": "public", "status": "Active", "type": "Tool", "description": "This audit: a repo tracker page (static site in `docs/`, data in `docs/repos.js`)", "notes": "GitHub Pages: gdebojyoti.github.io/github-audit responds", "lastCommit": "2026-09-30" },
+    { "name": "github-audit", "visibility": "public", "status": "Active", "type": "Tool", "description": "This audit: a repo tracker page (static site in `docs/`, data in `docs/repos.js`)", "notes": "GitHub Pages: [gdebojyoti.github.io/github-audit](https://gdebojyoti.github.io/github-audit/) responds", "lastCommit": "2026-09-30" },
+    { "name": "tactris", "visibility": "public", "status": "Active", "type": "Game", "description": "Browser puzzle game: place pieces to clear rows, with no timer and nothing falling (TypeScript). A 2018 prototype, revived in October 2026", "notes": "[tablehop.games/tactris](https://tablehop.games/tactris) responds", "lastCommit": "2026-10-13" },
     { "name": "stonks-2000-fe", "visibility": "public", "status": "Undecided", "type": "Game", "description": "Front end of a web-based stock-market game (per owner). README is just the title", "notes": "1 open PR (own)", "lastCommit": "2026-09-02" },
     { "name": "stonks-2000-be", "visibility": "public", "status": "Undecided", "type": "Game", "description": "Back end of a web-based stock-market game (per owner). Only a `.gitignore` so far", "notes": "", "lastCommit": "2026-09-03" },
     { "name": "mini-apps", "visibility": "public", "status": "Undecided", "type": "Learning", "description": "Setup only. README plans \"OTP input\" and \"Gmail 'to' field\"", "notes": "", "lastCommit": "2026-07-13" },
     { "name": "interview-fe", "visibility": "public", "status": "Undecided", "type": "?", "description": "React Router template; its one component says \"Code goes here...\"", "notes": "", "lastCommit": "2026-07-14" },
     { "name": "fantasy-football-wc26", "visibility": "public", "status": "Deleted", "type": "?", "description": "Unmodified React Router template, a single \"Initial commit\"", "notes": "*Deleted on 2026-09-30*", "lastCommit": "2026-06-12" },
     { "name": "css-stopwatch", "visibility": "public", "status": "Undecided", "type": "?", "description": "Description says \"pure CSS stopwatch\"", "notes": "**Zero commits**", "lastCommit": "" },
-    { "name": "project-tiles", "visibility": "public", "status": "Parked", "type": "Game", "description": "Web puzzle game with tutorial and levels", "notes": "tiles.debojyotighosh.com responds; 1 open PR", "lastCommit": "2024-03-30" },
-    { "name": "wzq", "visibility": "public", "status": "Parked", "type": "Game", "description": "Multiplayer Wuziqi/Gomoku front end (Next.js, Redux)", "notes": "wzq.debojyotighosh.com responds", "lastCommit": "2025-03-02" },
+    { "name": "project-tiles", "visibility": "public", "status": "Parked", "type": "Game", "description": "Web puzzle game with tutorial and levels", "notes": "tiles.debojyotighosh.com **did not respond**; 1 open PR", "lastCommit": "2024-03-30" },
+    { "name": "wzq", "visibility": "public", "status": "Parked", "type": "Game", "description": "Multiplayer Wuziqi/Gomoku front end (Next.js, Redux)", "notes": "wzq.debojyotighosh.com **did not respond**", "lastCommit": "2025-03-02" },
     { "name": "wzq.socket", "visibility": "public", "status": "Parked", "type": "Game", "description": "Socket.IO back end for wzq", "notes": "", "lastCommit": "2025-03-02" },
-    { "name": "projekt", "visibility": "public", "status": "Parked", "type": "App", "description": "Next.js app with a \"goodreads-top-100\" page and Marvel/DC omnibus JSON data", "notes": "projekt-lilac.vercel.app responds", "lastCommit": "2024-12-31" },
+    { "name": "projekt", "visibility": "public", "status": "Parked", "type": "App", "description": "Next.js app with a \"goodreads-top-100\" page and Marvel/DC omnibus JSON data", "notes": "[projekt-lilac.vercel.app/goodreads-top-100](https://projekt-lilac.vercel.app/goodreads-top-100) responds", "lastCommit": "2024-12-31" },
     { "name": "ext-chrome-bricklink-price-finder", "visibility": "public", "status": "Parked", "type": "Tool", "description": "Chrome extension \"BrickLink Price Tracker\" (from its manifest)", "notes": "No README", "lastCommit": "2025-11-15" },
-    { "name": "project-pipes", "visibility": "public", "status": "Parked", "type": "Learning", "description": "Next.js app for learning to deploy on EC2 with nginx; Jenkins/Docker/K8s steps not done", "notes": "pipes.debojyotighosh.com responds", "lastCommit": "2024-06-08" },
+    { "name": "project-pipes", "visibility": "public", "status": "Parked", "type": "Learning", "description": "Next.js app for learning to deploy on EC2 with nginx; Jenkins/Docker/K8s steps not done", "notes": "pipes.debojyotighosh.com **did not respond**", "lastCommit": "2024-06-08" },
     { "name": "101-mfe", "visibility": "public", "status": "Parked", "type": "Learning", "description": "Micro-frontend experiments (Module Federation) with a CI workflow", "notes": "", "lastCommit": "2026-06-29" },
     { "name": "101-ts", "visibility": "public", "status": "Parked", "type": "Learning", "description": "TypeScript learning notes and code", "notes": "", "lastCommit": "2026-06-02" },
     { "name": "boilerplate-react-vite", "visibility": "public", "status": "Parked", "type": "Config", "description": "React 19 + Vite + Router starter", "notes": "", "lastCommit": "2025-02-04" },
@@ -62,7 +63,6 @@ window.AUDIT = {
     { "name": "xentropoly", "visibility": "public", "status": "To archive", "type": "Game", "description": "Web multiplayer board game", "notes": "1 open issue, 1 open PR", "lastCommit": "2018-04-22" },
     { "name": "xentropoly-backend", "visibility": "public", "status": "To archive", "type": "Game", "description": "Back end for xentropoly", "notes": "2 open issues, 1 open PR", "lastCommit": "2018-05-15" },
     { "name": "flappy-bird", "visibility": "public", "status": "To archive", "type": "Game", "description": "Web Flappy Bird clone", "notes": "", "lastCommit": "2019-04-06" },
-    { "name": "tactris", "visibility": "public", "status": "To archive", "type": "Game", "description": "Tetromino-on-a-grid prototype", "notes": "", "lastCommit": "2018-06-15" },
     { "name": "unity-tpa", "visibility": "public", "status": "To archive", "type": "Game", "description": "Unity: \"The Platformer Architect\"; README links a Steam page", "notes": "1 open issue", "lastCommit": "2024-08-10" },
     { "name": "zombie-runner", "visibility": "public", "status": "Deleted", "type": "Game", "description": "Unity endless runner", "notes": "*Deleted on 2026-09-30*", "lastCommit": "2021-07-16" },
     { "name": "xentropolis", "visibility": "public", "status": "To archive", "type": "Game", "description": "Unity test of a top-down farming RPG", "notes": "", "lastCommit": "2021-11-06" },
