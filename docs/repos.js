@@ -12,17 +12,18 @@
 
 window.AUDIT = {
   owner: "gdebojyoti",
-  auditDate: "2026-09-30",
+  auditDate: "2026-10-13",
   openQuestions: [
     "**Private repos**: not audited yet."
   ],
   repos: [
-    { "name": "linted", "visibility": "public", "status": "Active", "type": "Product", "description": "Resume builder (Next.js). **Linted.**", "notes": "PRs merged daily; 14 open issues, all own (backlog/ideas)", "lastCommit": "2026-09-29" },
-    { "name": "main-site", "visibility": "public", "status": "Active", "type": "Product", "description": "Personal site styled like VS Code, with themes and a terminal (Next.js, Dockerfile). **Portfolio.**", "notes": "debojyotighosh.com responds", "lastCommit": "2026-09-28" },
-    { "name": "101-dsa", "visibility": "public", "status": "Active", "type": "Learning", "description": "Daily data-structures-and-algorithms practice (\"Day 46: Binary search tree…\")", "notes": "No README", "lastCommit": "2026-09-30" },
+    { "name": "linted", "visibility": "public", "status": "Active", "type": "Product", "description": "Resume builder (Next.js). **Linted.**", "notes": "PRs merged daily; 5 open issues, all own (backlog/ideas)", "lastCommit": "2026-10-05" },
+    { "name": "main-site", "visibility": "public", "status": "Active", "type": "Product", "description": "Personal site styled like VS Code, with themes and a terminal (Next.js, Dockerfile). **Portfolio.**", "notes": "debojyotighosh.com responds", "lastCommit": "2026-10-09" },
+    { "name": "101-dsa", "visibility": "public", "status": "Active", "type": "Learning", "description": "Daily data-structures-and-algorithms practice (\"Day 46: Binary search tree…\")", "notes": "No README", "lastCommit": "2026-10-13" },
     { "name": "101-node", "visibility": "public", "status": "Active", "type": "Learning", "description": "Node.js basics (CommonJS → ES modules)", "notes": "No README", "lastCommit": "2026-09-23" },
     { "name": "gdebojyoti", "visibility": "public", "status": "Active", "type": "Config", "description": "Profile README shown on the GitHub profile page", "notes": "Needed for the profile", "lastCommit": "2022-02-04" },
     { "name": "github-audit", "visibility": "public", "status": "Active", "type": "Tool", "description": "This audit: a repo tracker page (static site in `docs/`, data in `docs/repos.js`)", "notes": "GitHub Pages: gdebojyoti.github.io/github-audit responds", "lastCommit": "2026-09-30" },
+    { "name": "tactris", "visibility": "public", "status": "Active", "type": "Game", "description": "Browser puzzle game: place pieces to clear rows, with no timer and nothing falling (TypeScript). A 2018 prototype, revived in October 2026", "notes": "tablehop.games/tactris responds", "lastCommit": "2026-10-13" },
     { "name": "stonks-2000-fe", "visibility": "public", "status": "Undecided", "type": "Game", "description": "Front end of a web-based stock-market game (per owner). README is just the title", "notes": "1 open PR (own)", "lastCommit": "2026-09-02" },
     { "name": "stonks-2000-be", "visibility": "public", "status": "Undecided", "type": "Game", "description": "Back end of a web-based stock-market game (per owner). Only a `.gitignore` so far", "notes": "", "lastCommit": "2026-09-03" },
     { "name": "mini-apps", "visibility": "public", "status": "Undecided", "type": "Learning", "description": "Setup only. README plans \"OTP input\" and \"Gmail 'to' field\"", "notes": "", "lastCommit": "2026-07-13" },
@@ -62,7 +63,6 @@ window.AUDIT = {
     { "name": "xentropoly", "visibility": "public", "status": "To archive", "type": "Game", "description": "Web multiplayer board game", "notes": "1 open issue, 1 open PR", "lastCommit": "2018-04-22" },
     { "name": "xentropoly-backend", "visibility": "public", "status": "To archive", "type": "Game", "description": "Back end for xentropoly", "notes": "2 open issues, 1 open PR", "lastCommit": "2018-05-15" },
     { "name": "flappy-bird", "visibility": "public", "status": "To archive", "type": "Game", "description": "Web Flappy Bird clone", "notes": "", "lastCommit": "2019-04-06" },
-    { "name": "tactris", "visibility": "public", "status": "To archive", "type": "Game", "description": "Tetromino-on-a-grid prototype", "notes": "", "lastCommit": "2018-06-15" },
     { "name": "unity-tpa", "visibility": "public", "status": "To archive", "type": "Game", "description": "Unity: \"The Platformer Architect\"; README links a Steam page", "notes": "1 open issue", "lastCommit": "2024-08-10" },
     { "name": "zombie-runner", "visibility": "public", "status": "Deleted", "type": "Game", "description": "Unity endless runner", "notes": "*Deleted on 2026-09-30*", "lastCommit": "2021-07-16" },
     { "name": "xentropolis", "visibility": "public", "status": "To archive", "type": "Game", "description": "Unity test of a top-down farming RPG", "notes": "", "lastCommit": "2021-11-06" },
